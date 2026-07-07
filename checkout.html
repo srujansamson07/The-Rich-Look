@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | TheRich Look</title>
+  <meta name="description" content="Checkout with TheRich Look and send your order details for confirmation.">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <script defer src="products/products.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body data-page="checkout">
+  <header class="site-header" data-header></header>
+  <main class="page-main">
+    <section class="page-hero"><div class="wrap"><p class="eyebrow">Secure enquiry checkout</p><h1>Checkout</h1><p>Share your order and contact details. The store can confirm product availability, payment, and delivery directly.</p></div></section>
+    <section class="section wrap checkout-grid">
+      <form class="form-panel" data-checkout-form>
+        <div class="form-grid">
+          <input name="name" placeholder="Full name" aria-label="Full name" required>
+          <input name="phone" placeholder="Phone number" aria-label="Phone number" required>
+          <input name="email" type="email" placeholder="Email address" aria-label="Email address" required>
+          <input name="city" placeholder="City" aria-label="City" required>
+          <input name="pincode" placeholder="Pincode" aria-label="Pincode" required>
+          <textarea class="full-span" name="address" placeholder="Shipping address" aria-label="Shipping address" required></textarea>
+        </div>
+        <div class="payment-options">
+          <label><input type="radio" name="payment" value="Store confirmation and UPI link" checked> Store confirmation and UPI link</label>
+          <label><input type="radio" name="payment" value="Cash on delivery placeholder"> Cash on delivery placeholder</label>
+          <label><input type="radio" name="payment" value="Card gateway placeholder"> Card gateway placeholder</label>
+        </div>
+        <button class="button gold full" type="submit">Place Order by Email</button>
+        <p class="empty" data-order-success hidden>Your cart has been cleared and the order email is opening.</p>
+      </form>
+      <aside data-checkout-summary></aside>
+    </section>
+  </main>
+  <footer class="site-footer" data-footer></footer>
+</body>
+</html>

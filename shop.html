@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop | TheRich Look</title>
+  <meta name="description" content="Shop premium men's formal wear, casual wear, essentials, and luxury fashion from TheRich Look.">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1">
+  <script defer src="products/products.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body data-page="shop">
+  <header class="site-header" data-header></header>
+  <main class="page-main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Shop The Edit</p>
+        <h1>Premium Menswear</h1>
+        <p>Browse sample products across formal wear, casual wear, everyday essentials, and signature premium pieces.</p>
+      </div>
+    </section>
+    <section class="section wrap">
+      <div class="filters">
+        <input data-search type="search" placeholder="Search products" aria-label="Search products">
+        <select data-category aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option>Formal Wear</option>
+          <option>Casual Wear</option>
+          <option>Everyday Essentials</option>
+          <option>Premium Men's Fashion</option>
+        </select>
+        <select data-sort aria-label="Sort products">
+          <option value="popular">Sort by Popularity</option>
+          <option value="newest">Newest</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+        </select>
+      </div>
+      <div class="product-grid" data-shop-grid></div>
+    </section>
+    <section class="section alt" id="wishlist">
+      <div class="wrap">
+        <div class="section-heading"><div><p>Saved pieces</p><h2>Wishlist</h2></div></div>
+        <div class="product-grid" data-wishlist-panel></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" data-footer></footer>
+</body>
+</html>
