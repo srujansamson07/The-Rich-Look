@@ -137,7 +137,7 @@ const PRODUCTS = [
     newest: 5,
     badge: "Cotton",
     image: "images/products/con001-hm-conscious.jpg",
-    gallery: ["images/products/con001-hm-conscious.jpg"],
+    gallery: ["images/products/con001-hm-conscious-1.jpeg", "images/products/con001-hm-conscious-2.jpeg", "images/products/con001-hm-conscious-3.jpeg", "images/products/con001-hm-conscious.jpeg"],
     colors: ["Cream", "Light Khaki", "Black", "Navy Blue", "Ash Gray", "Khaki Green"],
     sizes: ["30", "32", "34", "36", "38"],
     description: "Relaxed cotton fit for casual wear.",
