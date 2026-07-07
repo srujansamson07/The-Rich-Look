@@ -126,6 +126,22 @@ const PRODUCTS = [
     sizes: ["S", "M", "L", "XL"],
     description: "A soft, elevated everyday tee for clean layering and minimal premium styling.",
     details: ["Dense cotton feel", "Modern crew neck", "Clean drape", "Everyday premium comfort"]
+  },
+  {
+    id: "con001-hm-conscious",
+    name: "H&M Concious",
+    category: "Casual Wear",
+    price: 749,
+    originalPrice: 1299,
+    popularity: 60,
+    newest: 5,
+    badge: "Cotton",
+    image: "images/products/con001-hm-conscious.jpg",
+    gallery: ["images/products/con001-hm-conscious.jpg"],
+    colors: ["Cream", "Light Khaki", "Black", "Navy Blue", "Ash Gray", "Khaki Green"],
+    sizes: ["30", "32", "34", "36", "38"],
+    description: "Relaxed cotton fit for casual wear.",
+    details: ["100% cotton", "Relaxed fit", "Machine wash cold"]
   }
 ];
 
