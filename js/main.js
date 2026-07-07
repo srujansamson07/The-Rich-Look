@@ -186,8 +186,11 @@ function renderProductDetail() {
   detail.innerHTML = `
     <section class="product-detail-grid">
       <div class="gallery">
-        <img class="main-gallery" data-main-gallery src="${product.image}" alt="${product.name}">
-        <div class="thumbs">${product.gallery.map((image) => `<button type="button" data-thumb="${image}"><img src="${image}" alt=""></button>`).join("")}</div>
+        <img class="main-gallery" data-main-gallery src="${product.image}" alt="${product.name} - ${product.description}">
+        <div class="thumbs">${product.gallery.map((image, idx) => {
+          const altText = product.galleryAlt?.[idx] || product.name;
+          return `<button type="button" data-thumb="${image}"><img src="${image}" alt="${altText}"></button>`;
+        }).join("")}</div>
       </div>
       <div class="detail-copy">
         <p class="eyebrow">${product.category}</p>
@@ -207,6 +210,7 @@ function renderProductDetail() {
     </section>
     <section class="section"><div class="section-heading"><div><p>Complete the look</p><h2>Related Products</h2></div></div><div class="product-grid">${(related.length ? related : PRODUCTS.slice(0, 4)).map(productCard).join("")}</div></section>`;
 
+  injectProductSchema(product);
   detail.querySelectorAll("[data-thumb]").forEach((button) => button.addEventListener("click", () => {
     detail.querySelector("[data-main-gallery]").src = button.dataset.thumb;
   }));
@@ -430,6 +434,34 @@ function injectStructuredData() {
     address: BRAND.address,
     url: location.origin + location.pathname,
     sameAs: ["https://www.instagram.com/therichlook_24/"]
+  });
+  document.head.appendChild(script);
+}
+
+function injectProductSchema(product) {
+  const existingScript = document.querySelector("script[data-product-schema]");
+  if (existingScript) existingScript.remove();
+  
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.dataset.productSchema = "true";
+  script.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    image: product.gallery,
+    brand: { "@type": "Brand", name: BRAND.name },
+    offers: {
+      "@type": "Offer",
+      url: location.href,
+      priceCurrency: "INR",
+      price: product.price.toString(),
+      priceValidUntil: new Date(Date.now() + 30*24*60*60*1000).toISOString().split('T')[0],
+      itemCondition: "https://schema.org/NewCondition",
+      availability: "https://schema.org/InStock"
+    },
+    category: product.category
   });
   document.head.appendChild(script);
 }
