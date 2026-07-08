@@ -153,6 +153,31 @@ const PRODUCTS = [
     details: ["100% cotton", "Relaxed fit", "Machine wash cold"]
   },
   {
+    id: "skn003-skin-it-arrow-plain",
+    name: "SKIN IT - Arrow Plain",
+    category: "Casual Wear",
+    price: 499,
+    originalPrice: 999,
+    popularity: 50,
+    newest: 4,
+    badge: "Oversize",
+    image: "images/products/skn003-skin-it-arrow-plain.jpeg",
+    gallery: [
+      "images/products/skn003-skin-it-arrow-plain-1.jpeg",
+      "images/products/skn003-skin-it-arrow-plain-2.jpeg",
+      "images/products/skn003-skin-it-arrow-plain.jpeg"
+    ],
+    galleryAlt: [
+      "SKIN IT - Arrow Plain oversized arrow graphic tee front view",
+      "SKIN IT - Arrow Plain close-up of back print and fabric texture",
+      "SKIN IT - Arrow Plain product flat lay showing available colors"
+    ],
+    colors: ["Cream", "Black", "Olive green", "Brown"],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Oversized graphic tee, streetwear t-shirt, men's boxy fit shirt, geometric arrow t-shirt, urban clothing, graphic tee, back print t-shirt.",
+    details: ["Oversized fit", "100% cotton", "Machine wash cold"]
+  },
+  {
     id: "skn002-skin-it-jordan",
     name: "SKIN IT - Jordan",
     category: "Casual Wear",
