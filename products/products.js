@@ -151,6 +151,31 @@ const PRODUCTS = [
     sizes: ["30", "32", "34", "36", "38"],
     description: "Relaxed cotton fit for casual wear.",
     details: ["100% cotton", "Relaxed fit", "Machine wash cold"]
+  },
+  {
+    id: "skn002-skin-it-jordan",
+    name: "SKIN IT - Jordan",
+    category: "Casual Wear",
+    price: 599,
+    originalPrice: 999,
+    popularity: 40,
+    newest: 4,
+    badge: "Oversize",
+    image: "images/products/skn002-skin-it-jordan.jpeg",
+    gallery: [
+      "images/products/skn002-skin-it-jordan-1.jpeg",
+      "images/products/skn002-skin-it-jordan-2.jpeg",
+      "images/products/skn002-skin-it-jordan.jpeg"
+    ],
+    galleryAlt: [
+      "SKIN IT - Jordan graphic tee orange and space blue front view",
+      "SKIN IT - Jordan neon green and brick red colorways flat lay",
+      "SKIN IT - Jordan product group display"
+    ],
+    colors: ["Orange", "Space Blue", "Neon Green", "Brick Red"],
+    sizes: ["S", "M", "L", "XL"],
+    description: "Level up your streetwear game with this vibrant Jordan graphic tee.",
+    details: ["Oversized fit", "100% cotton", "Machine wash cold"]
   }
 ];
 
